@@ -92,7 +92,7 @@ The library handles type mismatches gracefully by falling back to string compari
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+This code is atomatically generated from a template. 
 
 ## License
 
