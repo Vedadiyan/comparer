@@ -96,8 +96,8 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 ## License
 
-[Your chosen license]
+Apache License 2.0
 
 ## Author
 
-[Your name/organization]
+Pouya Vedadiyan
