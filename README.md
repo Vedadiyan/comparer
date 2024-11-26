@@ -90,10 +90,6 @@ The library handles type mismatches gracefully by falling back to string compari
 - Direct type comparisons are used when possible
 - String conversion is only used as a fallback for unsupported types
 
-## Contributing
-
-This code is atomatically generated from a template.
-
 ## License
 
 Apache License 2.0

@@ -76,14 +76,16 @@ func createTestCases[T any](_ T) []struct {
 		{"vs String", "10", 0},
 		{"Greater Than", 5, 1},
 		{"Less Than", 15, -1},
+		{"Less Than", 15, -1},
+		{"vs any", []string{}, -1},
 	}
 }
 
 func TestInt(t *testing.T) {
-	i := Int(10)
+	i := int(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("Int.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -91,10 +93,10 @@ func TestInt(t *testing.T) {
 }
 
 func TestInt32(t *testing.T) {
-	i := Int32(10)
+	i := int32(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("Int32.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -102,10 +104,10 @@ func TestInt32(t *testing.T) {
 }
 
 func TestInt64(t *testing.T) {
-	i := Int64(10)
+	i := int64(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("Int64.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -113,10 +115,10 @@ func TestInt64(t *testing.T) {
 }
 
 func TestInt16(t *testing.T) {
-	i := Int16(10)
+	i := int16(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("Int16.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -124,10 +126,10 @@ func TestInt16(t *testing.T) {
 }
 
 func TestInt8(t *testing.T) {
-	i := Int8(10)
+	i := int8(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("Int8.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -135,10 +137,10 @@ func TestInt8(t *testing.T) {
 }
 
 func TestUint(t *testing.T) {
-	i := UInt(10)
+	i := uint(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("UInt.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -146,10 +148,10 @@ func TestUint(t *testing.T) {
 }
 
 func TestUint64(t *testing.T) {
-	i := UInt64(10)
+	i := uint64(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("UInt64.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -157,10 +159,10 @@ func TestUint64(t *testing.T) {
 }
 
 func TestUint32(t *testing.T) {
-	i := UInt32(10)
+	i := uint32(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("UInt32.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -168,10 +170,10 @@ func TestUint32(t *testing.T) {
 }
 
 func TestUint16(t *testing.T) {
-	i := UInt16(10)
+	i := uint16(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("UInt16.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -179,10 +181,10 @@ func TestUint16(t *testing.T) {
 }
 
 func TestByte(t *testing.T) {
-	i := Byte(10)
+	i := byte(10)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("Byte.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -190,10 +192,10 @@ func TestByte(t *testing.T) {
 }
 
 func TestFloat32(t *testing.T) {
-	i := Float32(10.0)
+	i := float32(10.0)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("Float32.Compare() = %v, want %v", got, tt.want)
 			}
 		})
@@ -201,10 +203,10 @@ func TestFloat32(t *testing.T) {
 }
 
 func TestFloat64(t *testing.T) {
-	i := Float64(10.0)
+	i := float64(10.0)
 	for _, tt := range createTestCases(i) {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := i.Compare(tt.v); got != tt.want {
+			if got := Compare(i, tt.v); got != tt.want {
 				t.Errorf("Float64.Compare() = %v, want %v", got, tt.want)
 			}
 		})
