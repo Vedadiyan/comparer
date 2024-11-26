@@ -144,8 +144,6 @@ func (i Float64) Compare(v any) int {
 		}
 	case string:
 		{
-			xx := fmt.Sprintf("%v", ref)
-			_ = xx
 			return strings.Compare(fmt.Sprintf("%v", ref), t)
 		}
 	}
