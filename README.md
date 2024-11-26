@@ -2,8 +2,6 @@
 
 A flexible and type-safe comparison library for Go that enables comparing values across different numeric types and strings.
 
-**IMPORTANT: This Code is Automatically Generated.**
-
 ## Features
 
 - Generic comparison function that works with multiple data types
@@ -94,7 +92,7 @@ The library handles type mismatches gracefully by falling back to string compari
 
 ## Contributing
 
-This code is atomatically generated from a template. 
+This code is atomatically generated from a template.
 
 ## License
 
