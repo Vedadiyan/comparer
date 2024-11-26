@@ -79,7 +79,6 @@ The library handles comparisons between different numeric types by converting th
 - The library uses type assertions and switches to handle different data types
 - When comparing with unsupported types, it falls back to string comparison
 - All numeric comparisons maintain type safety while allowing cross-type comparisons
-- Floating-point numbers are converted to integers for comparison
 
 ## Error Handling
 
