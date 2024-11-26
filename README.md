@@ -44,25 +44,6 @@ func main() {
 }
 ```
 
-### Type-Specific Comparisons
-
-You can also use type-specific comparers for more explicit comparisons:
-
-```go
-import "github.com/vedadiyan/comparer"
-
-func main() {
-    // Using Int type
-    value := comparer.Int(5)
-    result := value.Compare(3)           // returns 1
-    result = value.Compare(uint32(5))    // returns 0
-    result = value.Compare(float64(7.0)) // returns -1
-    
-    // Compare with strings
-    result = value.Compare("5")          // returns 0
-}
-```
-
 ## Supported Type Conversions
 
 The library handles comparisons between different numeric types by converting them to the base type before comparison. Here's the compatibility matrix:
